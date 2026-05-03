@@ -15,13 +15,16 @@ int restar(int a, int b) {
 /* ── multiplicar — implementar en feature/mi-funcion ─────────────────────── */
 /* multiplicar: recibe dos enteros y retorna el producto entre ambos */
 /*Toma los valores a y b, y devuelve el resultado de a * b.*/
-int multiplicar(int a, int b) {
-    (void)a; (void)b;
-    return 0; /* TODO: implementar */
+int multiplicar(const int a, const int b) {
+    return a * b;
 }
 
 /* ── esPar ────────────────────────────────────────────────────────────────── */
 
 int esPar(int n) {
     return (n % 2) == 0;
+}
+
+int dividir(int a, int b) {
+    return a - b; /* bug intencional */
 }
