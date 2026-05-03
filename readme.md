@@ -53,9 +53,10 @@ make
 
 Vas a ver que `multiplicar` devuelve 0 — eso es lo esperado, es lo que vas a implementar.
 
+
 > **Tip:** a lo largo del laboratorio podés correr `make test` en cualquier momento para ver cuántos checks pasás, sin necesidad de hacer push. Guardá el push para cuando hayas terminado una parte completa.
 
----
+
 
 ## Qué vas a aprender
 
@@ -105,6 +106,8 @@ Cada respuesta correcta suma puntos. Las respuestas se validan automáticamente 
 
 Una branch (rama) es una línea de desarrollo independiente. Te permite trabajar en algo nuevo sin tocar el código que ya funciona, y luego integrar esos cambios cuando estén listos y revisados.
 
+
+
 ```
 main     ──●──────────────────────────●──▶
             \                        /
@@ -114,6 +117,7 @@ feature      ●── ●── ●── ●── ●──●──/
 En la mayoría de los equipos existe una rama principal protegida — generalmente llamada `main`, aunque en muchos proyectos se usa `develop` u otras convenciones — que siempre debe tener código funcional y estable. Nadie trabaja directamente en ella: cada nuevo cambio va en una branch propia que después se integra via Pull Request, una vez revisada.
 
 ¿Por qué? Porque cuando varias personas trabajan en paralelo sobre la misma base de código, si todos modifican `main` directamente, el historial se convierte en un caos: cambios a medias, código roto, imposible saber qué hizo quién y cuándo. Las branches le dan a cada persona un espacio de trabajo aislado, sin interferir con el trabajo de los demás hasta que el cambio esté listo.
+
 
 **Regla de oro:** nunca trabajar directamente en `main`. Todo cambio va en una branch propia.
 
@@ -143,7 +147,6 @@ Abrí `operaciones.c`. Encontrá la función `multiplicar` y reemplazá el cuerp
 int multiplicar(int a, int b) {
     return a * b;
 }
-```
 
 Acordate de sacar el `(void)a; (void)b;` también, ya no hace falta.
 
@@ -165,6 +168,7 @@ Antes de commitear, Git te pide que elijas explícitamente qué cambios incluir.
 ```
 Working directory  →  git add  →  Staging area  →  git commit  →  Historial
 ```
+
 
 ¿Por qué existe el staging area? Porque a veces modificás varios archivos pero querés hacer commits separados por tema. El staging te permite decir "este cambio va en este commit, y ese otro va en el siguiente", sin tener que commitear todo junto ni perder ningún cambio.
 
@@ -287,7 +291,7 @@ c) Para que el historial de commits sea más corto y lineal
 d) Porque GitHub Classroom lo requiere para la corrección automática
 
 ```
-RESPUESTA_P1=
+RESPUESTA_P1=b
 ```
 
 ---
@@ -414,7 +418,7 @@ c) Hacer un rebase interactivo para reescribir el historial antes de responder a
 d) Pedirle al owner que mergee igual y hacer el fix en un PR separado
 
 ```
-RESPUESTA_P2=
+RESPUESTA_P2=b
 ```
 
 ---
@@ -495,7 +499,7 @@ c) Porque `git reset --hard` modifica el historial local, generando conflictos p
 d) Porque GitHub bloquea automáticamente los push después de un `git reset --hard`
 
 ```
-RESPUESTA_P3=
+RESPUESTA_P3=c
 ```
 
 ---
@@ -571,11 +575,7 @@ Abrí `operaciones.c`. Vas a ver algo así:
 
 ```c
 int esPar(int n) {
-<<<<<<< HEAD
     return (n % 2) == 0; /* version main */
-=======
-    return (n & 1) == 0;
->>>>>>> origin/feature/conflicto-demo
 }
 ```
 
@@ -627,7 +627,7 @@ c) `(n & 1) == 0` no funciona con números negativos en ningún compilador C est
 d) No hay ninguna diferencia; el compilador genera exactamente el mismo código para ambas
 
 ```
-RESPUESTA_P4=
+RESPUESTA_P4=b
 ```
 
 ---
@@ -645,7 +645,7 @@ c) Si hay que revertir un cambio puntual es imposible sin deshacer todo lo del d
 d) Git rechaza commits que modifiquen demasiados archivos al mismo tiempo
 
 ```
-RESPUESTA_P5=
+RESPUESTA_P5=c
 ```
 
 ---
@@ -661,7 +661,7 @@ c) `git fetch` solo descarga la branch actual; `git pull` descarga todas las bra
 d) `git pull` siempre pide confirmación antes de modificar archivos locales; `git fetch` no
 
 ```
-RESPUESTA_P6=
+RESPUESTA_P6=b
 ```
 
 ---
@@ -677,7 +677,7 @@ c) Qué problema resuelve o qué funcionalidad agrega, cómo se verificó que fu
 d) El tiempo que tardó en implementarse y el nombre del autor
 
 ```
-RESPUESTA_P7=
+RESPUESTA_P7=c
 ```
 
 ---

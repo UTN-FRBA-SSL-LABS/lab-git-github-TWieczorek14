@@ -19,7 +19,7 @@
       "setup": "make clean && make",
       "run": "./calculadora | grep -q '3 \\* 5    = 15'",
       "input": "", "output": "", "comparison": "included",
-      "timeout": 5, "points": 8
+     "timeout": 5, "points": 8
     },
     {
       "name": "C4. Commit wip: experimento roto existe",
